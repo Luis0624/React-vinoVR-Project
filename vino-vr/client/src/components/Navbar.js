@@ -1,9 +1,12 @@
-import React from 'react'; 
+import React, { useContext } from 'react'; 
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import Logo from '../images/vino-vr.png';
 import '../styles/Navbar.css'
+import { AuthContext } from '../utils/AuthContext'
 
 function NavBar() {
+  const { auth, setAuth } = useContext( AuthContext);
 
     return (
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -32,19 +35,21 @@ function NavBar() {
       </NavDropdown>
     </Nav>
     <Nav className="ml-auto">
-        <>
+      { !auth
+        ? <>
         <Button variant="outline-success" size="sm" className="LoginButton" href="/signin" >
-            Login
+            Sign In
         </Button>
         
         <Button variant="outline-primary" size="sm" href="/signup">
             Sign Up
         </Button>
         </>
-      {/* <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link> */}
+        : <Button variant="outline-danger" size="sm" onClick={ () => setAuth( false )}>
+        Logout
+      </Button>
+      }
+      
     </Nav>
   </Navbar.Collapse>
 </Navbar>

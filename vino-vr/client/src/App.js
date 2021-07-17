@@ -6,36 +6,41 @@ import Header from './components/Header';
 import  Mood from './components/Mood';
 // import About from './components/About';
 import Featured from './components/Featured';
-// import SignIn from './components/SignIn2';
-// import Signup from './components/SignUp2';
+import SignIn from './components/SignIn';
+import Signup from './components/Signup';
 import Favorites from './components/Favorites';
 import Footer from './components/Footer';
 import Routes from './routes/Routes';
-import AuthApi from './utils/AuthApi';
+import { AuthProvider } from './utils/AuthContext';
 import './App.css';
 
 function App() {
   const [auth, setAuth] = useState(false);
 
   return (
-   <AuthApi.Provider value={{ auth, setAuth }}>           
+   <AuthProvider value={{ auth, setAuth }}>           
     <Router>
       <div>
         <NavBar />
-          <Route exact path="/" component={Header} />
-             <Routes />
-            {/* <Route exact path="/login" component={SignIn} />
-            <Route exact path="/signup" component={Signup} /> */}
-          {/* <Route exact path="/about" component={About} /> */}
-          <Route exact path="/mood" component={Mood} />
-          {/* <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} /> */}
-          <Route exact path="/featured" component={Featured} />
-          <Route exact path="/favorites" component={Favorites} />
+            { !auth
+              ? <>
+                <Route exact path="/" component={Header} />
+                <Route exact path="/Signin" component={SignIn} />
+                <Route exact path="/signup" component={Signup} /> 
+                <Route exact path="/mood" component={Mood} />
+                <Route exact path="/featured" component={Featured} />
+                <Route exact path="/favorites" component={Favorites} />
+              </>
+              : <>
+                {/* <Route exact path="/mood" component={Mood} />
+                <Route exact path="/featured" component={Featured} />
+                <Route exact path="/favorites" component={Favorites} /> */}
+              </>
+            }
          <Footer />
       </div>
     </Router>
-   </AuthApi.Provider>
+   </AuthProvider>
 
   );
 }

@@ -14,7 +14,15 @@
     /* padding: 2rem, 0.75rem 0.75rem 0.75rem; */
     color: #F4E5CA;
     margin: 2rem;
-    background: transparent;
+    background: #f4e5ca4f;
+    position: absolute;
+    bottom:7%;
+    right: 45%;
+}
+.btn-change-mood:hover {
+    border: 2px solid #ecd3a3;
+    background: #e2d3b74f;
+    
 }
 
 .btn-mood {
@@ -30,6 +38,7 @@
     border-radius:50%;
     height: 100px;
     width: 100px;
+    
 }
 
 .btn-1 {
@@ -43,3 +52,7 @@
 .btn-3 {
     margin-right: 30px;
 }
+ .cards {
+     display: flex;
+     flex-direction: row;
+ }

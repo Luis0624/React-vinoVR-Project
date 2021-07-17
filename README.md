@@ -7,16 +7,21 @@ A browser-based VR experience that allows you to find new wines to try or enjoy 
 </p>
 
 <p align="center">
-    <a href="#">Visit us here!</a>
+    <a href="https://vinovr-experience.herokuapp.com/">Visit us here for the React Project</a>
+    <br>
+     <a href="https://vinovr-experience.herokuapp.com/">Checkout the VR Experience portion of our project!</a>
+
 </p>
 
 ## Table of Contents
 
 - [About](#about)
+- [Links](#links)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [Authors](#authors)
+
 
 ## About
 
@@ -26,6 +31,16 @@ In a time of full customizable everything, shouldn't wine be customized to your 
 Stress and anxiety heighten your perception of bitterness and astringency, opening a highly tannic red wine when you are angry and frustrated will cause the wine to appear excessively aggressive and hard edge. The same bottle on a lazy Sunday surrounded by loved ones will appear elegant and nuanced in comparison.
 
 We cut the guess work with tannins and acidity out of the way. Pick your mood we pick the wine then send you somewhere to unwind, or relax, celebrate perhaps. It’s going to be a blast, Saluti!
+
+## Links
+
+Visit our Project repo at [React VinoVR Project](https://github.com/raposogiselle/React-vinoVR).
+
+Checkout the VR Experience portion of our project at [VinoVR Experience](https://vinovr-experience.herokuapp.com/).
+    
+
+
+
 
 ## Usage
 

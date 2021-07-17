@@ -1,9 +1,15 @@
 .CardGroupBG{
   background: url(../images/BGgeneral.png);
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   height: 90vh;
+
   
+}
+
+.container {
+  margin-left: 0% !important;
+  margin-right: 0% im !important;
 }
 
 .Card {

@@ -1,7 +1,14 @@
+.cardContainer {
+display: block;
+}
+
 .card {
-    background: #fff;
+    background: #F4E5CA;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     border-radius: 2px;
-    height: 325px;
+    height: 525px;
     margin: 1rem;
     position: relative;
     width: 325px;
@@ -10,19 +17,21 @@
   }
   
   .card > .img-container {
-    height: 60%;
-    overflow: hidden;
+    height: 100%;
+    overflow: clip;
     text-align: center;
     background:#6CADDC;
   }
   .card > .img-container > img {
-    width: 60%
+    width: fit-content;
+    height: fit-content;
   }
-  
+   
   .card > .content {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 15px;
+    background:#F4E5CA;
   }
   
   .card > .content > ul {

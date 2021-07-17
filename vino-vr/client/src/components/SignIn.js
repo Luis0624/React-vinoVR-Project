@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import AuthApi from '../utils/AuthApi'
+import { AuthContext } from '../utils/AuthContext';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -52,10 +52,10 @@ export default function SignIn() {
   const classes = useStyles();
 
   
-  const authApi = React.useContext(AuthApi);
+  const { setAuth } = React.useContext(AuthContext);
   const handleSignIn = () => {
-    authApi.setAuth(true);
-}; 
+    setAuth(true);
+  }; 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />

@@ -13,7 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import authApi from '../utils/AuthApi';
+import API from '../utils/Api';
 import '../styles/signIn.css';
 
 
@@ -28,7 +28,7 @@ export default function SignUp() {
   const handleSubmit = () => {
   
     const newUser = {firstName, lastName, email, password, dateOfBirth}
-    authApi.createUser(newUser).then(res => console.log(res)).catch(err => console.log(err))
+    API.createUser(newUser).then(res => console.log(res)).catch(err => console.log(err))
   }
 
 function Copyright() {
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    color: '#F4E5CA;',
+    // color: '#F4E5CA;',
   },
   avatar: {
     margin: theme.spacing(1),
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5" style={{color: "#F4E5CA"}}>
+        <Typography component="h1" variant="h5">
           Sign up
         </Typography>
         <form className={classes.form} noValidate>
