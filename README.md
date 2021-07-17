@@ -36,7 +36,11 @@ We cut the guess work with tannins and acidity out of the way. Pick your mood we
 
 Visit our Project repo at [React VinoVR Project](https://github.com/raposogiselle/React-vinoVR).
 
-Checkout the VR Experience portion of our project at [VinoVR Experience](https://vinovr-experience.herokuapp.com/).
+Visit our Project repo at [React VinoVR Project](https://github.com/graceyangyxt/Aframe-VinoVR).
+
+Checkout the deployed VR Experience portion of our project at [React VinoVR](https://vinovr.herokuapp.com/).
+
+Checkout the deployed VR Experience portion of our project at [VinoVR Experience](https://vinovr-experience.herokuapp.com/).
     
 
 
